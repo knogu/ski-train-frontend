@@ -16,7 +16,8 @@ export const PlaceField = (props: Props) => {
 
   useEffect(() => {
     if (isRequesting) {
-      const url = 'http://localhost/?start_station=新浦安&ski_resort=上越国際スキー場'
+      const url = process.env.REACT_APP_API_URL + '/?start_station=新浦安&ski_resort=上越国際スキー場'
+      console.log(url)
       fetch(url)
         .then((res) => {
           return res.json()
