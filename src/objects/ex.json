@@ -1,0 +1,139 @@
+{ "toSki":
+  [
+    {
+      "transferHour": 0,
+      "transferMinute": 0,
+      "startStation": "新浦安",
+      "reachStation": "東京",
+      "services": [
+        {
+          "startHour": 5,
+          "startMinute": 51,
+          "reachHour": 6,
+          "reachMinute": 24,
+          "isWithLaggageSpace": false
+        },
+        {
+          "startHour": 6,
+          "startMinute": 5,
+          "reachHour": 6,
+          "reachMinute": 49,
+          "isWithLaggageSpace": false
+        }
+      ]
+    },
+    {
+      "transferHour": 0,
+      "transferMinute": 0,
+      "startStation": "東京",
+      "reachStation": "越後湯沢",
+      "services": [
+        {
+          "startHour": 6,
+          "startMinute": 44,
+          "reachHour": 7,
+          "reachMinute": 54,
+          "isWithLaggageSpace": true
+        },
+        {
+          "startHour": 7,
+          "startMinute": 2,
+          "reachHour": 8,
+          "reachMinute": 32,
+          "isWithLaggageSpace": false
+        }
+      ]
+    },
+    {
+      "transferHour": 0,
+      "transferMinute": 5,
+      "startStation": "越後湯沢",
+      "reachStation": "神立スノーリゾート",
+      "services": [
+        {
+          "startHour": 8,
+          "startMinute": 5,
+          "reachHour": 8,
+          "reachMinute": 15,
+          "isWithLaggageSpace": false
+        },
+        {
+          "startHour": 9,
+          "startMinute": 30,
+          "reachHour": 9,
+          "reachMinute": 45,
+          "isWithLaggageSpace": false
+        }
+      ]
+    }
+  ],
+  "Back":
+  [
+    {
+      "transferHour": 0,
+      "transferMinute": 0,
+      "startStation": "新浦安",
+      "reachStation": "東京",
+      "services": [
+        {
+          "startHour": 5,
+          "startMinute": 51,
+          "reachHour": 6,
+          "reachMinute": 24,
+          "isWithLaggageSpace": false
+        },
+        {
+          "startHour": 6,
+          "startMinute": 5,
+          "reachHour": 6,
+          "reachMinute": 49,
+          "isWithLaggageSpace": false
+        }
+      ]
+    },
+    {
+      "transferHour": 0,
+      "transferMinute": 0,
+      "startStation": "東京",
+      "reachStation": "越後湯沢",
+      "services": [
+        {
+          "startHour": 6,
+          "startMinute": 44,
+          "reachHour": 7,
+          "reachMinute": 54,
+          "isWithLaggageSpace": true
+        },
+        {
+          "startHour": 7,
+          "startMinute": 2,
+          "reachHour": 8,
+          "reachMinute": 32,
+          "isWithLaggageSpace": false
+        }
+      ]
+    },
+    {
+      "transferHour": 0,
+      "transferMinute": 5,
+      "startStation": "越後湯沢",
+      "reachStation": "神立スノーリゾート",
+      "services": [
+        {
+          "startHour": 8,
+          "startMinute": 5,
+          "reachHour": 8,
+          "reachMinute": 15,
+          "isWithLaggageSpace": false
+        },
+        {
+          "startHour": 9,
+          "startMinute": 30,
+          "reachHour": 9,
+          "reachMinute": 45,
+          "isWithLaggageSpace": false
+        }
+      ]
+    }
+  ]
+}

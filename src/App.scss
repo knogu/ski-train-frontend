@@ -1,0 +1,49 @@
+.main {
+  margin: 50px;
+  hr {
+    margin-bottom: 0;
+  }
+}
+
+.place-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  padding-bottom: 15px;
+  .select-place {
+    width: 40%;
+    max-width: 300px;
+    margin: 5px;
+    height: 80%;
+  }
+  .search-button {
+    margin-top: 10px;
+  }
+}
+
+.ways {
+  display: flex;
+  justify-content: stretch;
+  .common-filter-params {
+    // display: flex;
+    // justify-content: space-evenly;
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+.way {
+  width: 50%;
+  padding: 10px;
+  margin-left: 10px;
+  &:first-child {
+    border-right: solid 1px rgba(0, 0, 0, 0.1);
+  }
+  .way-name {
+    font-size: 22px;
+  }
+}
