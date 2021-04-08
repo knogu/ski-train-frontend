@@ -36,8 +36,8 @@ const Choice = (props: ChoiceProps) => {
   const choiceItem = choice.map((service) => {
     return (
       <>
-        <p>{service.startTime.paddedHour()}時{service.startStation}出発</p>
-        <p>{service.reachTime.paddedHour()}時{service.reachStation}到着</p>
+        <p>{service.startTime.hhmm()}{service.startStation}出発</p>
+        <p>{service.reachTime.hhmm()}{service.reachStation}到着</p>
       </>
     )
   })
