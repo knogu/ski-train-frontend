@@ -1,8 +1,5 @@
 .main {
   margin: 50px;
-  hr {
-    margin-bottom: 0;
-  }
 }
 
 .place-form {
@@ -27,9 +24,8 @@
 .ways {
   display: flex;
   justify-content: stretch;
+  flex-wrap: wrap;
   .common-filter-params {
-    // display: flex;
-    // justify-content: space-evenly;
     .query-header {
       font-size: 18px;
       text-align: center;
@@ -42,9 +38,10 @@
 
 .way {
   width: 50%;
+  margin: 0 auto;
   padding: 10px;
-  +.way {
-    border-left: solid 1px rgba(0, 0, 0, 0.1);
+  @media (max-width: 698px) {
+    width: 100%;
   }
   .way-name {
     font-size: 22px;
