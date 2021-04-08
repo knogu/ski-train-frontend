@@ -22,6 +22,21 @@ export class Time {
     return new Time(resultHour, resultMinute)
   }
 
+  subtract(diff: Time) {
+    let resultHour: number;
+    let resultMinute: number;
+    resultMinute = this.minute - diff.minute;
+    resultHour = this.hour - diff.hour;
+    if (resultMinute <= 0) {
+      resultMinute += 60;
+      resultHour -= 1;
+    }
+    if (resultHour <= 0){
+      resultHour += 24;
+    }
+    return new Time(resultHour, resultMinute);
+  }
+
   isEqualOrGreater(target: Time) {
     if (this.hour > target.hour) {
       return true
@@ -46,5 +61,9 @@ export class Time {
 
   paddedMinute() {
     return this.minute.toString().padStart(2, '0');
+  }
+
+  hhmm() {
+    return this.paddedHour() + ':' + this.paddedMinute();
   }
 }

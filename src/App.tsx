@@ -13,8 +13,8 @@ function App() {
     <div className="main">
       <PlaceField wayToSki={ wayToSki } wayBack={ wayBack }/>
       <div className='ways'>
-        <Way wayName='行き' way={ wayToSki }/>
-        <Way wayName='帰り' way={ wayBack }/>
+        <Way wayName='行き' way={ wayToSki } key={"0"}/>
+        <Way wayName='帰り' way={ wayBack } key={"1"}/>
       </div>
     </div>
   );
