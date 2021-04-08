@@ -13,6 +13,7 @@ export const TotalChoices = (props: Props) => {
         choice={ choice }
         wayName={ props.wayName }
         index={ i.toString() }
+        key={ i.toString() }
       />
     )
   })
