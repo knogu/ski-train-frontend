@@ -34,12 +34,12 @@ interface ChoiceProps {
 const Choice = (props: ChoiceProps) => {
   const { choice, wayName, index } = props;
 
-  const choiceItem = choice.map((service) => {
+  const choiceItem = choice.map((service, i) => {
     return (
-      <>
+      <div key={ i.toString() }>
         <p>{service.startTime.hhmm()}{service.startStation}出発</p>
         <p>{service.reachTime.hhmm()}{service.reachStation}到着</p>
-      </>
+      </div>
     )
   })
 
