@@ -30,8 +30,12 @@
   .common-filter-params {
     // display: flex;
     // justify-content: space-evenly;
-    h3 {
+    .query-header {
       font-size: 18px;
+      text-align: center;
+    }
+    .query-body {
+      text-align: center;
     }
   }
 }
@@ -39,9 +43,8 @@
 .way {
   width: 50%;
   padding: 10px;
-  margin-left: 10px;
-  &:first-child {
-    border-right: solid 1px rgba(0, 0, 0, 0.1);
+  +.way {
+    border-left: solid 1px rgba(0, 0, 0, 0.1);
   }
   .way-name {
     font-size: 22px;

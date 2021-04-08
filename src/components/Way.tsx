@@ -12,8 +12,7 @@ type WayProps = {
 export const Way = (props: WayProps) => {
   return (
     <div className='way'>
-      <h1 className='way-name'>{ props.wayName }</h1>
-      <QueryField query={props.way.query} setQuery={props.way.setQuery}/>
+      <QueryField query={props.way.query} setQuery={props.way.setQuery} wayName={props.wayName}/>
       <TotalChoices choices={props.way.choices}/>
     </div>
   )
