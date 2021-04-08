@@ -25,14 +25,12 @@
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
-  .common-filter-params {
-    .query-header {
-      font-size: 18px;
-      text-align: center;
-    }
-    .query-body {
-      text-align: center;
-    }
+  .query-header {
+    font-size: 18px;
+    text-align: center;
+  }
+  .query-body {
+    text-align: center;
   }
 }
 
