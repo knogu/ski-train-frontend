@@ -46,6 +46,9 @@
   }
   .totalChoices {
     width: 70%;
+    @media (max-width: 698px) {
+      width: 100%;
+    }
     margin: 10px auto 0;
     .choice {
       .accordion-button {
