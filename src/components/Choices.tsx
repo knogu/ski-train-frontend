@@ -44,6 +44,9 @@ const Choice = (props: ChoiceProps) => {
   })
 
   const idForAccordion = wayName + index;
+
+  const timeRequired = choice.slice(-1)[0].reachTime.subtract(choice[0].startTime);
+  const timeRequiredFmt = String(timeRequired.hour) + '時間' + String(timeRequired.minute) + '分';
   
   return (
     <div className='choice accordion-item'>
@@ -52,8 +55,8 @@ const Choice = (props: ChoiceProps) => {
           <span>
             {choice[0].startTime.hhmm() + '-' + choice.slice(-1)[0].reachTime.hhmm()}
           </span>
-          <span>
-            ({choice.slice(-1)[0].reachTime.subtract(choice[0].startTime).hhmm()})
+          <span className='time-required'>
+            ({timeRequiredFmt})
           </span>
         </button>
       </h2>
