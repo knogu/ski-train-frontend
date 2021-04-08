@@ -35,7 +35,6 @@ export class TotalTransports {
   applyNeedsLaggageSpace(searchQuery: Query) {
     this.transports.forEach((transport, i) => {
       if (transport.isBulletTrain()) {
-        console.log(transport.services)
         if (searchQuery.needsLaggageSpace) {
           this.transports[i].services = transport.services.filter((service) => service.isWithLaggageSpace)
         } else {
