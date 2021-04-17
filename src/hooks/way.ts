@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Query, QueryDefault } from  '../objects/query';
 import { Service } from '../objects/service';
 import { TotalTransports } from '../objects/total-transport';
-import { TransportJson, TotalTransportsJson } from '../objects/json-interface';
+import { TransportJson } from '../objects/json-interface';
 
 export type useWayType = {
   query: Query;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { TotalTransportsJson, TransportJson } from '../objects/json-interface';
+import { TotalTransportsJson } from '../objects/json-interface';
 import Select from 'react-select';
 import { useWayType } from '../hooks/way'
-import { TotalTransports, totalTransportJsonEx } from '../objects/total-transport'
+import { TotalTransports } from '../objects/total-transport'
 
 interface Props {
   wayToSki: useWayType,

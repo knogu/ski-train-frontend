@@ -31,6 +31,6 @@ export class Transport {
   }
 
   isBulletTrain = () => {
-    return (this.startStation == '東京' && this.reachStation == '越後湯沢') || (this.startStation == '越後湯沢' && this.reachStation == '東京')
+    return (this.startStation === '東京' && this.reachStation === '越後湯沢') || (this.startStation === '越後湯沢' && this.reachStation === '東京')
   }
 }

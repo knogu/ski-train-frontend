@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Select from 'react-select';
+import React from 'react';
 import { useWayType } from '../hooks/way';
 import { QueryField } from './QueryField';
 import { TotalChoices } from './Choices';

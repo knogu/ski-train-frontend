@@ -40,7 +40,7 @@ export class Time {
   isEqualOrGreater(target: Time) {
     if (this.hour > target.hour) {
       return true
-    } else if (this.hour == target.hour){
+    } else if (this.hour === target.hour){
       return this.minute >= target.minute
     } else {
       return false
