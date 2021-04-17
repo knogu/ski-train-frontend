@@ -1,5 +1,8 @@
 .main {
   margin: 50px;
+  @media(max-width: 767px) {
+    margin: 20px;
+  }
 }
 
 .place-form {
@@ -41,6 +44,9 @@
     }
     span {
       display: none;
+    }
+    @media(max-width: 767px) {
+      margin: 5px 20px;
     }
   }
   @media(max-width: 767px) {
