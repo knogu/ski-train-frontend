@@ -3,8 +3,10 @@ import { TotalTransportsJson } from '../objects/json-interface';
 import Select from 'react-select';
 import { useWayType } from '../hooks/way';
 import { TotalTransports } from '../objects/total-transport';
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import ja from 'date-fns/locale/ja'
+registerLocale('ja', ja)
 
 interface Props {
   wayToSki: useWayType,
@@ -86,6 +88,7 @@ export const PlaceField = (props: Props) => {
     <>
       <div className='place-form'>
         <DatePicker
+          locale='ja'
           selected={date}
           onChange={handleDateChange}
         />
@@ -97,7 +100,7 @@ export const PlaceField = (props: Props) => {
         >Search</button>
         {/* { props.wayToSki.travel[0] ? props.wayToSki.travel[0].toString() : ''} */}
       </div>
-      <hr></hr>
+      <hr className='mt-0'></hr>
     </>
   )
 }
