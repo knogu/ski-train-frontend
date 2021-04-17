@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { TotalTransportsJson } from '../objects/json-interface';
 import Select from 'react-select';
-import { useWayType } from '../hooks/way'
-import { TotalTransports } from '../objects/total-transport'
+import { useWayType } from '../hooks/way';
+import { TotalTransports } from '../objects/total-transport';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 interface Props {
   wayToSki: useWayType,
@@ -57,6 +59,7 @@ export const PlaceField = (props: Props) => {
   const resortOptions = [
     { value: '上越国際スキー場', label: '上越国際スキー場' },
     { value: 'ガーラ湯沢', label: 'ガーラ湯沢' },
+    { value: '神立スノーリゾート', label: '神立スノーリゾート' },
   ]  
 
   type selectOption = {label: string, value: string}
@@ -73,10 +76,19 @@ export const PlaceField = (props: Props) => {
     }
   };
 
+  const initialDate = new Date()
+  const [startDate, setStartDate] = useState(initialDate)
+  const handleChange = (date:Date) => {
+    setStartDate(date)
+  }
 
   return (
     <>
       <div className='place-form'>
+        <DatePicker
+          selected={startDate}
+          onChange={handleChange}
+        />
         <Select options={startOptions} className='select-place' placeholder='出発駅' onChange={ handleStartStationInput }/>
         <Select options={resortOptions} className='select-place' placeholder='スキー場' onChange={ handleSkiResortInput } />
         <button
