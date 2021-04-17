@@ -101,6 +101,7 @@ export const PlaceField = (props: Props) => {
           className='search-button btn btn-outline-primary'
         >Search</button>
       </div>
+      
       <hr className='mt-0'></hr>
     </>
   )

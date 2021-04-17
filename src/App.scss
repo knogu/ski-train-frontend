@@ -11,19 +11,44 @@
   width: 90%;
   padding-bottom: 10px;
   .select-date {
-    width: 120px;
-    margin-right: 5px;
+    width: 200px;
+    margin: 5px 10px;
+    height: 38px;
+    font-size: 16px;
+    .MuiInput-formControl {
+      height: 100%;
+    }
+    input {
+      padding-left: 13px;
+      padding-bottom: 2px;
+      &::placeholder {
+        color: hsl(0, 0%, 50%);
+        opacity: 1;
+      }
+    }
   }
   .select-place {
-    width: 40%;
-    max-width: 300px;
-    min-width: 250px;
-    margin: 5px;
+    width: 200px;
+    margin: 5px 10px;
     height: 80%;
+    &>div {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    }
+    &:focus {
+      outline: none;
+    }
+    span {
+      display: none;
+    }
   }
   @media(max-width: 767px) {
     .search-button {
-      margin-top: 5px;
+      font-size: 14px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      margin-top: 10px;
     }
   }
 }
