@@ -37,16 +37,18 @@ export const PlaceField = (props: Props) => {
   }, [isRequesting]);
 
   const onSearch = () => {
-    if (!startStation && !skiResort) {
-      alert('出発駅とスキー場を入力してください');
-      return
-    }
-    if (!startStation) {
-      alert('出発駅を入力してください');
-      return
-    }
-    if (!skiResort) {
-      alert('スキー場を入力してください');
+    if (!startStation || !skiResort || !date) {
+      let alert_ = '';
+      if (!startStation) {
+        alert_ += '出発駅を入力してください\n';
+      }
+      if (!skiResort) {
+        alert_ += 'スキー場を入力してください\n';
+      }
+      if (!date) {
+        alert_ += '日付を入力してください\n';
+      }
+      alert(alert_)
       return
     }
     setIsRequesting(true);
