@@ -65,15 +65,14 @@ export class TotalTransports {
       travel.push(serviceOfFirstTransport)
       let reachTime = serviceOfFirstTransport.reachTime
       let canReach = true
-      let poppedPrev = false
+      // 一本前と同じ電車を使ったフラグ
+      let popPrev = false
       for (let i = 1; i < this.transports.length; i++) {
         let retArray = this.transports[i].getNextService(reachTime);
         if (retArray) {
           let [nextService, usedAgain] = retArray;
-          if (usedAgain && !poppedPrev) {
-            result.pop()
-            poppedPrev = true
-          }
+          // このtravelで目的地にたどり着けない場合があるので、たどり着くことを確認してからpopする
+          popPrev = usedAgain
           travel.push(nextService);
           reachTime = nextService.reachTime
         } else {
@@ -82,6 +81,9 @@ export class TotalTransports {
         }
       }
       if (canReach) {
+        if (popPrev) {
+          result.pop()
+        }
         result.push(travel)
       }
     })
