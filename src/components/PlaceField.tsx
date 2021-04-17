@@ -79,18 +79,19 @@ export const PlaceField = (props: Props) => {
     }
   };
 
-  const [date, setDate] = useState<Date | null>(new Date());
+  const [date, setDate] = useState<Date | null>(null);
 
   return (
     <>
       <div className='place-form'>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <DatePicker
-            // label="label"
+            className='select-date'
             value={date}
             onChange={setDate}
             format="yyyy/MM/dd"
             animateYearScrolling
+            placeholder='日付'
           />
         </MuiPickersUtilsProvider>
         <Select options={startOptions} className='select-place' placeholder='出発駅' onChange={ handleStartStationInput }/>
@@ -99,7 +100,6 @@ export const PlaceField = (props: Props) => {
           onClick={ onSearch }
           className='search-button btn btn-outline-primary'
         >Search</button>
-        {/* { props.wayToSki.travel[0] ? props.wayToSki.travel[0].toString() : ''} */}
       </div>
       <hr className='mt-0'></hr>
     </>

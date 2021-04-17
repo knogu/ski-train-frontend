@@ -7,13 +7,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 90%;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  .select-date {
+    width: 120px;
+    margin-right: 5px;
+  }
   .select-place {
     width: 40%;
     max-width: 300px;
+    min-width: 250px;
     margin: 5px;
     height: 80%;
+  }
+  @media(max-width: 767px) {
+    .search-button {
+      margin-top: 5px;
+    }
   }
 }
 
