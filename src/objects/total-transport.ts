@@ -65,11 +65,15 @@ export class TotalTransports {
       travel.push(serviceOfFirstTransport)
       let reachTime = serviceOfFirstTransport.reachTime
       let canReach = true
+      let poppedPrev = false
       for (let i = 1; i < this.transports.length; i++) {
         let retArray = this.transports[i].getNextService(reachTime);
         if (retArray) {
           let [nextService, usedAgain] = retArray;
-          if (usedAgain) { result.pop() }
+          if (usedAgain && !poppedPrev) {
+            result.pop()
+            poppedPrev = true
+          }
           travel.push(nextService);
           reachTime = nextService.reachTime
         } else {

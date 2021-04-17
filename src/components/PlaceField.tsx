@@ -18,7 +18,7 @@ export const PlaceField = (props: Props) => {
 
   useEffect(() => {
     if (isRequesting) {
-      const url = process.env.REACT_APP_API_URL + `/?start_station=${startStation}&ski_resort=${skiResort}&year=${date.getFullYear().toString()}&month=${date.getMonth().toString()}&date=${date.getDate().toString()}`
+      const url = process.env.REACT_APP_API_URL + `/?start_station=${startStation}&ski_resort=${skiResort}&year=${date.getFullYear().toString()}&month=4&date=${date.getDate().toString()}`
       fetch(url)
         .then((res) => {
           return res.json()

@@ -24,7 +24,9 @@ export class Transport {
     for (let i = this.nextTrainIndex; i < this.services.length; i++) {
       if (this.services[i].startTime.isEqualOrGreater(timeAfterTransfer)) {
         // 返り値の後ろの値がtrue <=> 既に使用したserviceを使った
-        return [this.services[i], i === this.nextTrainIndex]
+        let usedAgain = i === this.nextTrainIndex
+        this.nextTrainIndex = i
+        return [this.services[i], usedAgain]
       }
     }
     return null
