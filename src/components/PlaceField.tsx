@@ -3,10 +3,9 @@ import { TotalTransportsJson } from '../objects/json-interface';
 import Select from 'react-select';
 import { useWayType } from '../hooks/way';
 import { TotalTransports } from '../objects/total-transport';
-import DatePicker, { registerLocale } from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import ja from 'date-fns/locale/ja'
-registerLocale('ja', ja)
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import { DatePicker } from "@material-ui/pickers";
 
 interface Props {
   wayToSki: useWayType,
@@ -19,7 +18,7 @@ export const PlaceField = (props: Props) => {
   const [isRequesting, setIsRequesting] = useState(false);
 
   useEffect(() => {
-    if (isRequesting) {
+    if (isRequesting && date) {
       const url = process.env.REACT_APP_API_URL + `/?start_station=${startStation}&ski_resort=${skiResort}&year=${date.getFullYear().toString()}&month=${(date.getMonth()+1).toString()}&date=${date.getDate().toString()}`
       fetch(url)
         .then((res) => {
@@ -80,20 +79,20 @@ export const PlaceField = (props: Props) => {
     }
   };
 
-  const initialDate = new Date()
-  const [date, setDate] = useState(initialDate)
-  const handleDateChange = (date:Date) => {
-    setDate(date)
-  }
+  const [date, setDate] = useState<Date | null>(new Date());
 
   return (
     <>
       <div className='place-form'>
-        <DatePicker
-          locale='ja'
-          selected={date}
-          onChange={handleDateChange}
-        />
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <DatePicker
+            // label="label"
+            value={date}
+            onChange={setDate}
+            format="yyyy/MM/dd"
+            animateYearScrolling
+          />
+        </MuiPickersUtilsProvider>
         <Select options={startOptions} className='select-place' placeholder='出発駅' onChange={ handleStartStationInput }/>
         <Select options={resortOptions} className='select-place' placeholder='スキー場' onChange={ handleSkiResortInput } />
         <button
