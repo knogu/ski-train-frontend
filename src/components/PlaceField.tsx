@@ -18,7 +18,7 @@ export const PlaceField = (props: Props) => {
 
   useEffect(() => {
     if (isRequesting) {
-      const url = process.env.REACT_APP_API_URL + '/?start_station=新浦安&ski_resort=上越国際スキー場'
+      const url = process.env.REACT_APP_API_URL + `/?start_station=${startStation}&ski_resort=${skiResort}&year=${date.getFullYear().toString()}&month=${date.getMonth().toString()}&date=${date.getDate().toString()}`
       fetch(url)
         .then((res) => {
           return res.json()
@@ -77,17 +77,17 @@ export const PlaceField = (props: Props) => {
   };
 
   const initialDate = new Date()
-  const [startDate, setStartDate] = useState(initialDate)
-  const handleChange = (date:Date) => {
-    setStartDate(date)
+  const [date, setDate] = useState(initialDate)
+  const handleDateChange = (date:Date) => {
+    setDate(date)
   }
 
   return (
     <>
       <div className='place-form'>
         <DatePicker
-          selected={startDate}
-          onChange={handleChange}
+          selected={date}
+          onChange={handleDateChange}
         />
         <Select options={startOptions} className='select-place' placeholder='出発駅' onChange={ handleStartStationInput }/>
         <Select options={resortOptions} className='select-place' placeholder='スキー場' onChange={ handleSkiResortInput } />
