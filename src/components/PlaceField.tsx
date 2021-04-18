@@ -94,8 +94,22 @@ export const PlaceField = (props: Props) => {
             placeholder='日付'
           />
         </MuiPickersUtilsProvider>
-        <Select options={startOptions} className='select-place' placeholder='出発駅' onChange={ handleStartStationInput }/>
-        <Select options={resortOptions} className='select-place' placeholder='スキー場' onChange={ handleSkiResortInput } />
+        <Select
+          menuPortalTarget={document.body}
+          menuPosition={'fixed'}
+          options={startOptions}
+          className='select-place'
+          placeholder='出発駅'
+          onChange={ handleStartStationInput }
+        />
+        <Select
+          menuPortalTarget={document.body}
+          menuPosition={'fixed'}
+          options={resortOptions}
+          className='select-place'
+          placeholder='スキー場'
+          onChange={ handleSkiResortInput }
+        />
         <button
           onClick={ onSearch }
           className='search-button btn btn-outline-primary'
