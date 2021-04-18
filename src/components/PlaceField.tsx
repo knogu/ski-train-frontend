@@ -55,13 +55,15 @@ export const PlaceField = (props: Props) => {
   };
 
   const startOptions = [
-    { value: '新浦安', label: '新浦安' },
+    { value: '日の出七丁目', label: '日の出七丁目' },
+    { value: 'ベイパーク', label: 'ベイパーク' },
+    { value: 'ベイモール', label: 'ベイモール' },
+    { value: 'シンボルロード', label: 'シンボルロード' },
+    { value: '明海四丁目', label: '明海四丁目' },
     { value: '海園の街', label: '海園の街' },
   ]
   
   const resortOptions = [
-    { value: '上越国際スキー場', label: '上越国際スキー場' },
-    { value: 'ガーラ湯沢', label: 'ガーラ湯沢' },
     { value: '神立スノーリゾート', label: '神立スノーリゾート' },
   ]  
 
