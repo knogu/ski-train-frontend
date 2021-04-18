@@ -115,7 +115,7 @@ export const PlaceField = (props: Props) => {
         <button
           onClick={ onSearch }
           className='search-button btn btn-outline-primary'
-        >Search</button>
+        >決定</button>
       </div>
     </>
   )

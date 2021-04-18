@@ -13,8 +13,9 @@ export const QueryField = (props: Props) => {
 
   return (
     <div className="search">
-      <h3 className='query-header'>{wayName}</h3>
+      <h3 className='way-header'>{wayName}</h3>
         <div className='query-body'>
+        <h4 className='filter-header'>絞り込み</h4>
         <TimeField
           hour={ query.startAfter.paddedHour() }
           minute={ query.startAfter.paddedMinute() }

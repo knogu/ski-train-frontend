@@ -63,9 +63,16 @@
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
-  .query-header {
-    font-size: 18px;
+  .way-header {
+    font-size: 22px;
+    padding-bottom: 6px;
     text-align: center;
+    border-bottom: 1px solid black;
+  }
+  .filter-header {
+    color: gray;
+    font-size: 18px;
+    margin: 10px 0 3px;
   }
   .query-body {
     text-align: center;
@@ -81,6 +88,12 @@
   }
   .way-name {
     font-size: 22px;
+  }
+  .choices-header {
+    color: gray;
+    font-size: 18px;
+    margin: 18px 0 3px;
+    text-align: center;
   }
   .totalChoices {
     width: 70%;

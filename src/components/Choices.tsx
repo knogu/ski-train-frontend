@@ -19,9 +19,12 @@ export const TotalChoices = (props: Props) => {
   })
 
   return (
-    <div className='totalChoices accordion' id={'totalAccordion-' + props.wayName}>
-      {choiceItems}
-    </div>
+    <>
+      <h4 className='choices-header'>検索結果</h4>
+      <div className='totalChoices accordion' id={'totalAccordion-' + props.wayName}>
+        {choiceItems}
+      </div>
+    </>
   )
 }
 
