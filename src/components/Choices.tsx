@@ -18,12 +18,26 @@ export const TotalChoices = (props: Props) => {
     )
   })
 
+  const results = () => {
+    console.log('results called')
+    console.log(props.choices.length)
+    if (props.choices.length) {
+      return (
+        <div className='totalChoices accordion' id={'totalAccordion-' + props.wayName}>
+          {choiceItems}
+        </div>
+      )
+    } else {
+      return (
+        <p className='no-data'>No data</p>
+      )
+    }
+  }
+
   return (
     <>
       <h4 className='choices-header'>検索結果</h4>
-      <div className='totalChoices accordion' id={'totalAccordion-' + props.wayName}>
-        {choiceItems}
-      </div>
+      { results() }
     </>
   )
 }
