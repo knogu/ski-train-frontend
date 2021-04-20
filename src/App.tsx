@@ -5,8 +5,8 @@ import { Way } from './components/Way';
 import { useWay } from './hooks/way';
 
 function App() {
-  const wayToSki = useWay();
-  const wayBack = useWay();
+  const wayToSki = useWay(true);
+  const wayBack = useWay(false);
 
   return (
     <div className="main">

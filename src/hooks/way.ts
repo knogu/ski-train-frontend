@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Query, QueryDefault } from  '../objects/query';
+import { Query, ToSkiQueryDefault, BackQueryDefault } from  '../objects/query';
 import { Service } from '../objects/service';
 import { TotalTransports } from '../objects/total-transport';
 import { TransportJson } from '../objects/json-interface';
@@ -13,8 +13,8 @@ export type useWayType = {
   setTotalTransports: React.Dispatch<React.SetStateAction<TotalTransports>>;
 }
 
-export const useWay = () => {
-  const [query, setQuery] = useState(QueryDefault);
+export const useWay = (isToSki: boolean) => {
+  const [query, setQuery] = useState(isToSki? ToSkiQueryDefault : BackQueryDefault);
   const [choices, setChoices] = useState([] as Service[][]);
   const [totalTransports, setTotalTransports] = useState(new TotalTransports([] as TransportJson[]));
 
