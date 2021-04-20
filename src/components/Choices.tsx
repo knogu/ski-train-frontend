@@ -19,8 +19,6 @@ export const TotalChoices = (props: Props) => {
   })
 
   const results = () => {
-    console.log('results called')
-    console.log(props.choices.length)
     if (props.choices.length) {
       return (
         <div className='totalChoices accordion' id={'totalAccordion-' + props.wayName}>
