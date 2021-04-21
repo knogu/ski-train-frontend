@@ -27,13 +27,14 @@ export class Time {
     let resultMinute: number;
     resultMinute = this.minute - diff.minute;
     resultHour = this.hour - diff.hour;
-    if (resultMinute <= 0) {
+    if (resultMinute < 0) {
       resultMinute += 60;
       resultHour -= 1;
     }
-    if (resultHour <= 0){
+    if (resultHour < 0){
       resultHour += 24;
     }
+    console.log(resultHour, resultMinute)
     return new Time(resultHour, resultMinute);
   }
 
