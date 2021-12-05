@@ -43,14 +43,6 @@ export const QueryField = (props: Props) => {
             setQuery(newQuery);
           }}
         />
-        <label>
-          <input
-            type='checkbox'
-            onChange={(e) => setQuery({ ...query, needsLaggageSpace: !query.needsLaggageSpace })}
-            checked={ query.needsLaggageSpace }
-          />
-          荷物置き場のある新幹線のみ
-        </label>
       </div>
     </div>
   );
